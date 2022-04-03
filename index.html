@@ -5,18 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  
+    <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>    
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin="">
+
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+
+ 
   <link rel="stylesheet" href="gallery.css">
-
-
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
     <title>isol24.ch GmBH</title>
 
     <style>
@@ -53,7 +62,8 @@
               <ul class="navbar-nav">
                 <li class="nav-item active"> <a class="nav-link" href="#home">Home </a> </li>
                 <li class="nav-item"><a class="nav-link" href="#services" > Services </a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery"> Work Done </a></li>
+                <li class="nav-item"><a class="nav-link" href="#gally"> Work Done </a></li>
+                <li class="nav-item"><a class="nav-link" data-scroll="scrollTo" href="#testimonials"> Testimonials </a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact"> Contact </a></li>
               </ul>
             </div>
@@ -192,28 +202,28 @@
 
 
 <div class="work_gallery" id="gallery">
-  <h1 style="text-align:center; margin-bottom: 2rem !important">Some of the work done </h1>
+  <h1 style="text-align:center; margin-bottom: 2rem !important" id="gally">Some of the work done </h1>
 
 <div class="gallery">
   <div class="gallery__column">
       <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0000.jpg" alt="Portrait by Jessica Felicio" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Jessica Felicio</figcaption>
+              <figcaption class="gallery__caption">Work Description 1</figcaption>
           </figure>
       </a>
 
       <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0001.jpg" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
+              <figcaption class="gallery__caption">Work Description 2</figcaption>
           </figure>
       </a>
 
       <a   class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0003.jpg" alt="Portrait by Alex Perez" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Alex Perez</figcaption>
+              <figcaption class="gallery__caption">Work Description 3</figcaption>
           </figure>
       </a>
   </div>
@@ -222,21 +232,21 @@
     <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0002.jpg" alt="Portrait by Noah Buscher" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Noah Buscher</figcaption>
+              <figcaption class="gallery__caption">Work Description 4</figcaption>
           </figure>
       </a>
       
       <a class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0004.jpg" alt="Portrait by Ivana Cajina" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Ivana Cajina</figcaption>
+              <figcaption class="gallery__caption">Work Description 5</figcaption>
           </figure>
       </a>
 
       <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0006.jpg" alt="Portrait by Sam Burriss" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Sam Burriss</figcaption>
+              <figcaption class="gallery__caption">Work Description 6</figcaption>
           </figure>
       </a>
   </div>
@@ -245,21 +255,21 @@
     <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0005.jpg" alt="Portrait by Mari Lezhava" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
+              <figcaption class="gallery__caption">Work Description 7</figcaption>
           </figure>
       </a>
       
       <a   class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0007.jpg" alt="Portrait by Ethan Haddox" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Ethan Haddox</figcaption>
+              <figcaption class="gallery__caption">Work Description 8</figcaption>
           </figure>
       </a>
 
       <a class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0002.jpg" alt="Portrait by Amir Geshani" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Amir Geshani</figcaption>
+              <figcaption class="gallery__caption">Work Description 9</figcaption>
           </figure>
       </a>
   </div>
@@ -268,21 +278,21 @@
     <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0003.jpg" alt="Portrait by Guilian Fremaux" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Guilian Fremaux</figcaption>
+              <figcaption class="gallery__caption">Work Description 10</figcaption>
           </figure>
       </a>
 
       <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0005.jpg" alt="Portrait by Jasmin Chew" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Jasmin Chew</figcaption>
+              <figcaption class="gallery__caption">Work Description 11</figcaption>
           </figure>
       </a>
       
       <a  class="gallery__link">
           <figure class="gallery__thumb">
               <img src="images/IMG-20220402-WA0006.jpg" alt="Portrait by Dima DallAcqua" class="gallery__image">
-              <figcaption class="gallery__caption">Portrait by Dima DallAcqua</figcaption>
+              <figcaption class="gallery__caption">Work Description 12  </figcaption>
           </figure>
       </a>
   </div>
@@ -292,6 +302,60 @@
 
 
  
+<div class="testimonials-clean" id="testimonials">
+
+
+<div class="container">
+  <div class="intro">
+      <h2 class="text-center">What others say about us </h2>
+      <p class="text-center">Our customers love us! Read what they have to say below. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
+  </div>
+  <div class="row people">
+      <div class="col-md-6 col-lg-4 item">
+          <div class="box">
+              <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+          </div>
+          <div class="author"><img class="rounded-circle" src="avatarImages/man(1).png">
+              <h5 class="name">Ben Johnson</h5>
+              <p class="title">CEO of Company Inc.</p>
+          </div>
+      </div>
+      <div class="col-md-6 col-lg-4 item">
+          <div class="box">
+              <p class="description">Praesent aliquam in tellus eu gravida. uhefue fe fuehfu Aliquam varius finibus est, et interdum justo suscipit id.</p>
+          </div>
+          <div class="author"><img class="rounded-circle" src="avatarImages/profile.png">
+              <h5 class="name">Carl Kent</h5>
+              <p class="title">Founder of Style Co.</p>
+          </div>
+      </div>
+      <div class="col-md-6 col-lg-4 item">
+          <div class="box">
+              <p class="description">Aliquam varius finibus est, et interdum justo suscipit. Vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p>
+          </div>
+          <div class="author"><img class="rounded-circle" src="avatarImages/avatar.png">
+              <h5 class="name">Emily Clark</h5>
+              <p class="title">Owner of Creative Ltd.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="location">
+  <h1 class="text-center" style="padding-top: 3rem; padding-bottom: 2rem; font-size: 3rem;">Location</h1>
+  <div id="map" style="max-width: 1200px; height: 400px; margin: 0 auto;"></div>
+
+</div>
+
+
 
 
 
@@ -304,7 +368,7 @@
 
 <!--CONTACT PAGE-->
 <div class="container mt-5 mb-5">
-  <h1 class="text-center mb-5 mt-5">
+  <h1 class="text-center mb-5 mt-5" style="margin-top: 5rem !important; font-size: 3rem;">
     Contact Details
   </h1>
   <div class="row">
@@ -313,7 +377,11 @@
         <div class="card-body">
           <img src="logos/map.png" width="70" style="display: block; margin: 0 auto;" alt="">
           <h2 class="card-title text-center mt-3">Address</h2>
-          <p class="mt-4">Location : <span style="font-weight: bold; font-size: 1.5rem;"> Solothurn, Switerland </span> </p>
+
+          <div class="details" style="height: 100px;" >
+            <p class="mt-4">Location : <span style="font-weight: bold; font-size: 1.5rem;"> Solothurn, Switerland </span> </p>
+          </div>
+
           <a href="#" class="btn btn-primary">Click to get the Location</a>
         </div>
       </div>
@@ -325,8 +393,10 @@
         <div class="card-body">
           <img src="logos/phone-call(1).png" width="70" style="display: block; margin: 0 auto;" alt="">
           <h2 class="card-title text-center mt-3">Phone Number</h2>
-          <p class="mt-4">Phone1 : <span style="font-weight: bold; font-size: 1.5rem;">+41 5236 5417 74782 </span> </p>
-          <p>Owner : <span style="font-weight: bold; font-size: 1.5rem;"> Festim Rexhepi </span> </p>
+          <div class="details" style="height: 100px;">
+            <p class="mt-4 mb-0 pb-0">Phone1 : <span style="font-weight: bold; font-size: 1.5rem;">+41 111 222 333 </span> </p>
+            <p>Owner : <span style="font-weight: bold; font-size: 1.5rem;"> Festim Rexhepi </span> </p>
+          </div>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
@@ -337,7 +407,9 @@
         <div class="card-body">
           <img src="logos/email.png" width="70" style="display: block; margin: 0 auto;" alt="">
           <h2 class="card-title text-center mt-3">Email</h2>
-          <p class="mt-4">Email : <span style="font-weight: bold; font-size: 1.5rem;"> name@gmail.com </span> </p>
+          <div class="details" style="height: 100px;">
+            <p class="mt-4">Email : <span style="font-weight: bold; font-size: 1.5rem;"> name@gmail.com </span> </p>
+          </div>
           <a href="#" class="btn btn-primary">Send Mail</a>
 
           
@@ -348,6 +420,9 @@
 
   </div>
 </div>
+
+
+
 
 
 
@@ -370,23 +445,51 @@
 				<p class="footer-links">
 					<a class="link-1" href="#">Home</a>
 
-					<a href="#">Blog</a>
+					<a href="#">Services</a>
 
-					<a href="#">Pricing</a>
-
-					<a href="#">About</a>
-
-					<a href="#">Faq</a>
+					<a href="#">Work Done</a>
 
 					<a href="#">Contact</a>
+
+					<a href="#">another link</a>
+
+					<a href="#">another link</a>
 				</p>
 
-				<p>Company Name &copy; 2015</p>
+				<p>  Copyright Gentrit Hoxha &copy; 2022</p>
 			</div>
 
 		</footer>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+    
     <script src="script.js"></script>
+
+
+
+
+    <script>
+      var map = L.map('map').setView([51.505, -0.09], 13);
+
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'your.mapbox.access.token'
+        }).addTo(map);
+          
+
+          // var popup = marker.bindPopup('<b>Hello world!</b><br />I am a popup.');
+
+          // popup.openPopup();
+
+    </script>
 </body>
 </html>
