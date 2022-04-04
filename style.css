@@ -276,14 +276,33 @@ section {
   .nav-item {
     text-align: left;
    margin-left: auto;
-   font-size: 3rem !important;
+
    font-weight: bold;
   }
 
   .nav-link {
+    font-size: 2rem !important;
     color: white !important;
   }
 
+  #maintitle {
+    display: none;
+  }
+
+
+  .section-heading {
+    padding: 3rem;
+    font-size: 2.4rem;
+  }
+  
+  #was {
+    padding: 2rem;
+    font-size: 2.4rem;
+  }
+
+  #loc {
+    font-size: 2.4rem;
+  }
   
 }
 
