@@ -229,13 +229,14 @@ section {
     position: fixed;
     top:0; 
     bottom: 0;
-    left: 100%;
-    width: 100%;
+    left:  100%;
+    width: 65% !important;
+    height: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
     overflow-y: auto;
     visibility: hidden;
-    background-color: black;
+    background-color: white;
     transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
   }
   .navbar-collapse.show {
@@ -256,8 +257,8 @@ section {
   #closingBtn{
     background-color: none !important;
     color: white !important;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 0   ;
     left: 25rem;
     font-size: 4rem;
   }
@@ -275,9 +276,8 @@ section {
 
   .nav-item {
     text-align: left;
-   margin-left: auto;
-
-   font-weight: bold;
+    margin-left: auto;
+    font-weight: bold;
   }
 
   .nav-link {
@@ -384,34 +384,52 @@ section {
 
 @media (max-width: 600px) {
   #closingBtn{
-    background-color: none !important;
+    border: none;
+    background: none;
+    outline: none;
     color: white !important;
     position: absolute;
-    top: 0;
-    left: 25rem;
-    font-size: 4rem;
+    top: 1rem;
+    left: 12rem !important;
+    font-size: 1rem !important;
+  }
+
+  .fa-times {
+    font-size: 3rem;
+    color: #1f194c !important;
   }
 
   .nav-item {
     text-align: center;
     margin-top: 2rem;
-    color: whites;
+    color: white;
   }
 
   .navbar-nav {
-   
+    display: block;
+    text-align: center;
     margin-top: 4rem;
   }
 
   .nav-item {
     text-align: left;
    margin-left: auto;
-   font-size: 3rem !important;
+   font-size: 1rem !important;
    font-weight: bold;
   }
 
+  .navbar-toggler-icon{
+    margin-right: 0.4rem;
+    font-size: 2rem !important;
+  }
+
+
+  
+
+  /*Part that should be changed*/
   .nav-link {
-    color: white !important;
+    font-size: 1.3rem !important;
+    color: black !important;
   }
 
   .footer-distributed .footer-left, .footer-distributed .footer-right {
