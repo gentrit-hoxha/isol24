@@ -64,6 +64,17 @@ transition: 0.3s;
     } 
 }
 
+@media (max-width: 500px) {
+   
+
+  .work_gallery {
+      margin-top: 56rem !important;
+  }
+  
+}
+
+
+
 
 
 
