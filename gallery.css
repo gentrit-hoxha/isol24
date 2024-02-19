@@ -48,10 +48,9 @@ transition: 0.3s;
 
 @media (max-width: 750px) {
    
-
-    .work_gallery {
+    /* .work_gallery {
         margin-top: 50rem !important;
-    }
+    } */
     .gallery {
         display: flex;
         flex-direction: column;
@@ -64,14 +63,14 @@ transition: 0.3s;
     } 
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
    
 
   .work_gallery {
       margin-top: 56rem !important;
   }
   
-}
+} */
 
 
 
